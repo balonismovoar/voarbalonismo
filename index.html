@@ -1741,6 +1741,67 @@ margin-top: -50px;
     margin-top: 0;
   }
 }
+
+/* ── MENU MOBILE MODERNO ── */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(14px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Links */
+.mobile-menu a {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--cream);
+  padding: 14px 28px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 40px;
+
+  transition: all .3s ease;
+}
+
+.mobile-menu a:hover {
+  background: var(--gold);
+  color: var(--charcoal);
+  border-color: var(--gold);
+}
+
+/* Hamburger animado */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
 </style>
 </head>
 <body>
@@ -1771,6 +1832,16 @@ margin-top: -50px;
     <span></span><span></span><span></span>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio">Início</a>
+  <a href="#experiencia">Experiência</a>
+  <a href="#pacotes">Pacotes</a>
+  <a href="#seguranca">Segurança</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#contato">Contato</a>
+</div>
 
 <!-- ── HERO ── -->
 <section class="hero" id="inicio">
@@ -1942,18 +2013,18 @@ Voar de balão é descobrir que a liberdade também pode ser delicada.
     <!-- Shared -->
     <div class="pkg-card reveal">
       <div class="pkg-badge">Compartilhado</div>
-      <h3 class="pkg-name">Voo<br>Smart</h3>
+      <h3 class="pkg-name">Voar<br>Smart</h3>
       <p class="pkg-desc">Divida a magia com outros viajantes e viva uma experiência coletiva única. Perfeito para quem deseja se aventurar sozinho ou em dupla.</p>
       <ul class="pkg-features">
         <li>40 minutos a 1h de voo</li>
         <li>Até 14 passageiros por Balão</li>
         <li>Balão Certificado</li>
         <li>Café da manhã incluído</li>
-        <li>Brinde com espumante</li>
+        <li>Brinde com Espumante</li>
         <li>Transfer</li>
         <li>Piloto experiente</li>
       </ul>
-      <a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Compartilhado." target="_blank" class="btn-pkg">Reservar este pacote</a>
+      <a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Samrt." target="_blank" class="btn-pkg">Reservar este pacote</a>
     </div>
 
     <!-- Romantic -->
@@ -1965,32 +2036,32 @@ Voar de balão é descobrir que a liberdade também pode ser delicada.
 Compartilhe o voo com poucas pessoas, em um ambiente selecionado, confortável e pensado para quem valoriza cada detalhe lá no alto.</p>
       <ul class="pkg-features">
        <li>1h a 1h20 de Voo</li>
-        <li>Espaço exclusivo em um Balão compartilhado</li>
-        <li>Piloto e Copiloto</li>
+        <li>Grupo Reduzido</li>
+        <li>Piloto Thales Borges e Copiloto Altair Correia</li>
         <li>Café da manhã especial</li>
-        <li>Champagne Chandon</li>
+        <li>Brinde com Chandon</li>
         <li>Sessão de fotos Fotografo Profissional</li>
         <li>Open Coller</li>
       </ul>
-<a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Romântico." target="_blank" class="btn-pkg">Reservar este pacote</a>
+<a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Experience." target="_blank" class="btn-pkg">Reservar este pacote</a>
     </div>
 
     <!-- Private -->
     <div class="pkg-card reveal reveal-delay-2">
-      <div class="pkg-badge">★ Mais Desejado</div>
+      <div class="pkg-badge">★ Exclusivo ★</div>
       <h3 class="pkg-name">Voar<br> Select</h3>
       <p class="pkg-desc">Uma experiência exclusiva para dois. Cuidadosamente orquestrada para criar o cenário perfeito para um momento que jamais será esquecido.</p>
       <ul class="pkg-features">
         <li>1h a 1h20 de Voo</li>
-        <li>Balão Certificado Exclusivo para o casal</li>
-        <li>Piloto e Copiloto</li>
+        <li>Balão Exclusivo para o casal</li>
+        <li>Piloto Thales Borges e Copiloto Altair Correia</li>
         <li>Café da manhã especial</li>
-        <li>Champagne Chandon</li>
+        <li>Brinde com Chandon</li>
         <li>Sessão de fotos Fotografo Profissional</li>
         <li>Open Coller</li>
       </ul>
       </ul>
-      <a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Privativo%20Especial." target="_blank" class="btn-pkg">Reservar este pacote</a>
+      <a href="https://wa.me/15991450534?text=Olá!%20Tenho%20interesse%20no%20Voo%20Select." target="_blank" class="btn-pkg">Reservar este pacote</a>
     </div>
   </div>
 </section>
@@ -2536,5 +2607,25 @@ const numObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.numbers-strip').forEach(el => numObserver.observe(el));
 </script>
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+/* Fecha ao clicar em um link */
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  });
+});
+</script>
+
 </body>
 </html>
